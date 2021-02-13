@@ -1,19 +1,7 @@
-import React from "react";
+import axios from "axios";
 
-const styles = {
-    header: {
-        backgroundColor: "#D99E6A",
-        color: "#8C4332",
-           
+export default {
+    getUsers: function() {
+        return axios.get("https://randomuser.me/api/?results=200&nat=us");
     }
-};
-
-function Header() {
-    return (
-        <div className="jumbotron" style={styles.header}>
-            <h1 className="display-1 text-center font-weight-normal">React Employee Directory</h1>
-        </div>
-    );
-};
-
-export default Header;
+}
